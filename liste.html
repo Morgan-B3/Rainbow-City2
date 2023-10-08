@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/liste.css">
+    <title>Lieux</title>
+</head>
+
+<header>
+    <!-- Navbar  -->
+    <a href="index.html"><img src="./images/logo.png" height="90px" alt="Rainbow City logo" class="rainbowlogo"></a>
+    <div class="flexcol">
+      <nav class="flexrow">
+        <div class="meteo"><a href="./meteo.html" class="header-text" id="meteo"></a><a href="./meteo.html"
+            class="header-text"><img src="images/sun.png" alt="soleil" class="soleil"></a> </div>
+        <div>
+          <a href="./presentation.html" class="header-text">Qui sommes-nous ?</a>
+          <a href="./connexion.html" class="header-text">Connexion</a>
+          <a href="./pageprofil.html" class="header-text">Mon profil<img src="./images/icone.png" alt="icone"
+              class="icone"></a>
+          <!-- <a href="./favoris.html" class="header-text">Favoris</a><img src="./images/favoris.png" alt="favoris"
+             class="favoris"> -->
+        </div>
+      </nav>
+      <nav class="navbar navbar-expand-lg container d-inline-flex justify-content-end">
+        <div class="container nav-taille">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <!-- <li class="nav-item">
+                         <a class="nav-link active header-text" aria-current="page" href="#">Accueil</a>
+                     </li> -->
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active header-text" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Découvrir la ville
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item header-text" href="presentation.html">Son histoire</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item header-text" href="listeDivertissement.html">Sa culture</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item header-text" href="resident.html">Devenez Resident</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active header-text" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Explorez
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item header-text" href="./tresor.html">Chasse au trésor</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item header-text" href="rainbowland.html">RainbowLand</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item header-text" href="liste.html">Lieux incontournables</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item header-text" href="nurserie.html">Formez-vous !</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active header-text" onclick="hasard()" href="#">Lieu au hasard !</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <form action="action_page.php">
+          <input type="search" placeholder="Chercher sur le site" required id="search" list="recherche"><datalist id="recherche"><option value="Ecole"><option value="Rainbowland"><option value="Meteo"><option value="Chasse au tresor"><option value="Mairie"><option value="Cinema"></datalist><input class="buttonClass"
+            type="button" value="OK">
+        </form>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Menu burger  -->
+  <nav class="navbar fixed-top offbouton ">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./index.html">Accueil</a>
+            </li>
+            <li>
+              <hr class="divider">
+            </li>
+            <li class="nav-item dropdown ">
+              <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Activités
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="listeNature.html">Nature</a></li>
+                <li><a class="dropdown-item" href="listeGastronomie.html">Gastronomie</a></li>
+                <li><a class="dropdown-item" href="listeDivertissement.html">Divertissement</a></li>
+                <li><a class="dropdown-item" href="listeHistoire.html">Histoire</a></li>
+                <li><a class="dropdown-item" href="listeSport.html">Sport</a></li>
+                <li><a class="dropdown-item" href="listeInsolite.html">Insolite</a></li>
+              </ul>
+            </li>
+            <li>
+              <hr class="divider">
+            </li>
+            <li class="nav-item dropdown ">
+              <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Vous êtes
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="listeResident.html">Résident</a></li>
+                <li><a class="dropdown-item" href="listeFamille.html">En famille</a></li>
+                <li><a class="dropdown-item" href="listeAmis.html">Entre amis</a></li>
+                <li><a class="dropdown-item" href="listeAmoureux.html">En amoureux</a></li>
+                <li><a class="dropdown-item" href="listeSolo.html">Seul</a></li>
+                <li><a class="dropdown-item" href="listeSport.html">Sportif</a></li>
+                <li><a class="dropdown-item" href="listeSenior.html">Sénior</a></li>
+                <li><a class="dropdown-item" href="listeCollegues.html">Entre collègues</a></li>
+              </ul>
+            </li>
+            <li>
+              <hr class="divider">
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link active" href="./tresor.html">Chasse au trésor</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link active" href="./rainbowland.html">RainbowLand</a>
+            </li>
+            <li>
+              <hr class="divider">
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link active" href="listePMR.html">Accès PMR</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link active" href="presentation.html">Qui sommes-nous ?</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link active" onclick="hasard()" href="#">Lieu au hasard !</a>
+            </li>
+            <li>
+              <hr class="divider">
+            </li>
+            <div class="d-flex iconemenu">
+              <!-- <div class="footcolumn header-text">Retrouvez-nous sur :</div> -->
+              <div>
+                <a href="https://twitter.com/" target="_blank"><i class="bi bi-twitter" style="color: #ffffff"></i></a>
+              </div>
+              <div>
+                <a href="https://instagram.com/" target="_blank"><i class="bi bi-instagram"
+                    style="color: #ffffff"></i></a>
+              </div>
+              <div>
+                <a href="https://facebook.com/" target="_blank"><i class="bi bi-facebook"
+                    style="color: #ffffff"></i></a>
+              </div>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+</body>
+
+
+<!-- Corps du texte  -->
+<div class="corps">
+        <!-- Bouton retour en haut -->
+        <div id="scrollUp" class="transition-opacity">
+            <a href="#top"><img src="./images/totop.png" class="totop" data-bs-container="body" data-bs-toggle="popover"
+                data-bs-placement="left" data-bs-content="Retour vers le haut" data-bs-trigger="hover"
+                data-bs-custom-class="custom-popover" /></a>
+          </div>
+    <!-- <div id="headerbody"> -->
+    <h1>Lieux incontournables</h1>
+    <div class="cartes d-flex flexcol">
+        <div class="card flexrow ">
+            <div class="row g-0">
+                <div class="col-md-3">
+                    <img src="./images/Bar_2.jpg" class="card-img-top" alt="lego">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Bar "Le Cube"</h5>
+                        <p class="card-text">Pas d'eau en vue, venez découvrir notre potion du sourire, vous ne ressortirez plus jamais de Rainbow city après avoir vécu cette expérience!</p>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="card-body">
+                        <a href="./lieuBar.html" class="btn btn-primary">GO</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card flexrow">
+            <div class="row g-0">
+                <div class="col-md-3">
+                    <img src="./images/Bibliothèque_2.jpg" class="card-img-top" alt="lego">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Bibliothèque "Croc' Blocks"</h5>
+                        <p class="card-text">Croc' Blocks est un lieu où petits et grands peuvent venir partager leur passion de la lecture. Donner envie de croquer des blocks de textes, autrement dit, des books, et de les Croquer, est notre coeur de métier. Alors bonne lecture à toutes et tous !</p>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="card-body">
+                        <a href="./lieuBibliotheque.html" class="btn btn-primary">GO</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card flexrow">
+            <div class="row g-0">
+                <div class="col-md-3">
+                    <img src="./images/Bowling_2.jpg" class="card-img-top" alt="lego">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Bowling "Aux Boules et Quilles"</h5>
+                        <p class="card-text">Le bowling de notre ville, Aux Boules et Quilles, permet aux enfants, aux parents, aux amis de se défouler sur la piste. La taille de nos boules est adaptée à chaque catégorie de joueurs. Alors ne vous faites pas de bile, et tous à vos boules pour striker en coeur !</p>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="card-body">
+                        <a href="./lieuBowling.html" class="btn btn-primary">GO</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card flexrow">
+            <div class="row g-0">
+                <div class="col-md-3">
+                    <img src="./images/Cinéma_2.jpg" class="card-img-top" alt="lego">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Cinema LegoMAX</h5>
+                        <p class="card-text">Bienvenue dans l'antre du 6ème art de Rainbow city, faites place à la 5D 16K, pour voir des briques plus cubiques que jamais !</p>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="card-body">
+                        <a href="./lieuCinema.html" class="btn btn-primary">GO</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card flexrow">
+            <div class="row g-0">
+                <div class="col-md-3">
+                    <img src="./images/coiffeur_2.jpg" class="card-img-top" alt="lego">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Salon de coiffure "Légo coupé décalé"</h5>
+                        <p class="card-text">Les légos, à l'image de notre belle ville pleine de couleurs, se doivent d'avoir des légocheveux soyeux, colorés et resplendissant !</p>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="card-body">
+                        <a href="./lieuCoiffeur.html" class="btn btn-primary">GO</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card flexrow">
+            <div class="row g-0">
+                <div class="col-md-3">
+                    <img src="./images/école_2.jpg" class="card-img-top" alt="lego">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Ecole HTML</h5>
+                        <p class="card-text">Tout est fractal même dans les légos, venez étudier le théorème des légos afin d'obtenir votre Haut Titre de Master en Légomancie (HTML).</p>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="card-body">
+                        <a href="./lieuEcole.html" class="btn btn-primary">GO</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card flexrow">
+            <div class="row g-0">
+                <div class="col-md-3">
+                    <img src="./images/legofleuriste.jpg" class="card-img-top" alt="lego">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Fleuriste "La Rose Cubique"</h5>
+                        <p class="card-text">Amateurs de fleurs et plantes en tout genre, profitez de notre large selection colorée. Pour vous faire plaisir, ou faire plaisir aux autres ... Dites-le avec des briques !</p>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="card-body">
+                        <a href="./lieuFleuriste.html" class="btn btn-primary">GO</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card flexrow">
+            <div class="row g-0">
+                <div class="col-md-3">
+                    <img src="./images/legoforet.png" class="card-img-top" alt="lego">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Forêt de Brickwood</h5>
+                        <p class="card-text">Après la joie que nous offre Rainbow city, venez découvrir les secrets enfouis au fin fond de sa forêt...</p>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="card-body">
+                        <a href="./lieuForet.html" class="btn btn-primary">GO</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card flexrow">
+            <div class="row g-0">
+                <div class="col-md-3">
+                    <img src="./images/legogare.jpg" class="card-img-top" alt="lego">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Gare de RainbowCity</h5>
+                        <p class="card-text">Une architecture grandiose et des trains toujours à l'heure, bienvenue à la gare de RainbowCity ! Notre personnel vous garantie les meilleurs services, en train comme à quai. En voiture Simone !</p>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="card-body">
+                        <a href="./lieuGare.html" class="btn btn-primary">GO</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card flexrow">
+            <div class="row g-0">
+                <div class="col-md-3">
+                    <img src="./images/legohopital.png" class="card-img-top" alt="lego">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Hopital St-Andrews</h5>
+                        <p class="card-text">Ici pas de médecin, il n'y a que des sourires pour vous soigner ! En espèrant que vous serez satisfaits par cette médecine révolutionnaire !</p>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="card-body">
+                        <a href="./lieuHopital.html" class="btn btn-primary">GO</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card flexrow">
+            <div class="row g-0">
+                <div class="col-md-3">
+                    <img src="./images/JardinBotanique.png" class="card-img-top" alt="lego">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Jardin botanique "Le Botarain"</h5>
+                        <p class="card-text">Le jardin botanique, Le Botarain, permet à chacun de découvrir l'univers du végétal dans un lieu aussi haut en couleur que notre ville. Un régal pour les yeux.</p>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="card-body">
+                        <a href="./lieuJardin.html" class="btn btn-primary">GO</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card flexrow">
+            <div class="row g-0">
+                <div class="col-md-3">
+                    <img src="./images/legoclose (2)_2.jpg" class="card-img-top" alt="lego">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Club "LégoClose"</h5>
+                        <p class="card-text">QG officiel de Rainbow city, ici on n'est pas sur Tinder, armez-vous d'un billet et venez contempler les Raingirls!</p>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="card-body">
+                        <a href="./lieuLegoclose.html" class="btn btn-primary">GO</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card flexrow ">
+            <div class="row g-0">
+                <div class="col-md-3">
+                    <img src="./images/mairie.jpg" class="card-img-top" alt="lego">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Mairie de RainbowCity</h5>
+                        <p class="card-text">Point central de RainbowCity, la mairie vous accueille 24h/24, 7j/7 pour rester à votre entière disposition. Admirez ses couleurs bleu blanc rouge, un choix esthétique discutable que nous devons à son architecte, le français "CSS".</p>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="card-body">
+                        <a href="./lieuMairie.html" class="btn btn-primary">GO</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card flexrow">
+            <div class="row g-0">
+                <div class="col-md-3">
+                    <img src="./images/Hopital_2.jpg" class="card-img-top" alt="lego">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Maison de retraite</h5>
+                        <p class="card-text">Les légomuscles se fragilisent avec le temps, c'est pour cela que nous aidons les Rainolds afin de conserver les pièces en bon état pour les recycler par la suite, car à Rainbow city nous prônons l'écologie!</p>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="card-body">
+                        <a href="./lieuMaisonRetraite.html" class="btn btn-primary">GO</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card flexrow">
+            <div class="row g-0">
+                <div class="col-md-3">
+                    <img src="./images/legomusee_2.jpg" class="card-img-top" alt="lego">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Musée</h5>
+                        <p class="card-text">Venez découvrir les fameux légoraptors ainsi que nos légosapiens qui se sont battus pour que Rainbow city soit aussi coloré.</p>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="card-body">
+                        <a href="./lieuMusee.html" class="btn btn-primary">GO</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card flexrow">
+            <div class="row g-0">
+                <div class="col-md-3">
+                    <img src="./images/brique0.png" class="card-img-top" alt="lego">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">1 Formation = 1 Brique</h5>
+                        <p class="card-text">Découvrez le domaine du numérique, et apprenez-en les rudiements, brique par brique.
+                            Réalisez les plus belles villes en Lego, et qui sait, peut-être serez-vous les fondateurs de votre propre Rainbow City ?</p>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="card-body">
+                        <a href="./nurserie.html" class="btn btn-primary">GO</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card flexrow">
+            <div class="row g-0">
+                <div class="col-md-3">
+                    <img src="./images/Opéra.png" class="card-img-top" alt="lego">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Opéra "La Brique Enchantée"</h5>
+                        <p class="card-text">Bâti dans un ancien Lego-musée, l'opéra de Rainbow City "La Brique Enchantée" offre une programmation des plus grands opéras classiques de Rainbow City. Notamment La Tarte de Ouf de Legolière.</p>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="card-body">
+                        <a href="./lieuOpera.html" class="btn btn-primary">GO</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card flexrow">
+            <div class="row g-0">
+                <div class="col-md-3">
+                    <img src="./images/legoparc.png" class="card-img-top" alt="lego">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Parc Rainbow Garden</h5>
+                        <p class="card-text">Le parc "Le Rainbow Garden", est l'endroit idéal pour se dépayser dans la ville. Convivialité et partage sont les maîtres mots de ce lieu.</p>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="card-body">
+                        <a href="./lieuParc.html" class="btn btn-primary">GO</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card flexrow">
+            <div class="row g-0">
+                <div class="col-md-3">
+                    <img src="./images/legoplage.jpg" class="card-img-top" alt="lego">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Plage de RainbowCity</h5>
+                        <p class="card-text">Sous les briques, la plage !<br>Venez passer vos après-midi ensoleillés (n'importe quel jour, donc) à vous prélasser sur la plage de briques fines, au son des vagues et des mouettes.</p>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="card-body">
+                        <a href="./lieuPlage.html" class="btn btn-primary">GO</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card flexrow">
+            <div class="row g-0">
+                <div class="col-md-3">
+                    <img src="./images/CasernePompiers_2.png" class="card-img-top" alt="lego">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Caserne de pompiers "Fight Fire"</h5>
+                        <p class="card-text">La caserne des pompiers, la "Fight Fire", est la caserne moderne et toute équipée de notre ville. Avec la Fight Fire, l'incendie n'a plus qu'a être éteint. Ses engins sont équipés de puissants canon de lego mousse permettant d'étouffer rapidement le lego feu. Avec la Fight Fire, vous pouvez dormir sur vos deux legoreilles.</p>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="card-body">
+                        <a href="./lieuPompiers.html" class="btn btn-primary">GO</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card flexrow">
+            <div class="row g-0">
+                <div class="col-md-3">
+                    <img src="./images/legoquartier1.jpg" class="card-img-top" alt="lego">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Quartier de Brickeria Lane</h5>
+                        <p class="card-text">Découvrez le plus calme, convivial (et seul) quartier résidentiel de RainbowCity. Ici, tout le monde se connait, tout le monde sourit, et les gens s'invitent les uns chez les autres. Alors, qu'attendez-vous pour emmenager ?</p>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="card-body">
+                        <a href="./lieuQuartier.html" class="btn btn-primary">GO</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card flexrow">
+            <div class="row g-0">
+                <div class="col-md-3">
+                    <img src="./images/lego6.jpg" class="card-img-top" alt="lego">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">RainbowLand</h5>
+                        <p class="card-text">Un parc d'attraction pour toute la famille ! Epilepsie garantie !</p>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="card-body">
+                        <a href="./rainbowland.html" class="btn btn-primary">GO</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card flexrow">
+            <div class="row g-0">
+                <div class="col-md-3">
+                    <img src="./images/legoresto_2.jpg" class="card-img-top" alt="lego">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Restaurant "La Brique aux Délices"</h5>
+                        <p class="card-text">Savourez des plats locaux concoctés par nos meilleurs chefs dans un établissement distingué.<br>Au menu : salade de briques, briques à la provençale, velouté de brique, brique-bourguignon, tarte à la brique, brique tatin et tiramisu (une spécialité etrangère).</p>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="card-body">
+                        <a href="./lieuRestaurant.html" class="btn btn-primary">GO</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card flexrow">
+            <div class="row g-0">
+                <div class="col-md-3">
+                    <img src="./images/riviere1.jpg" class="card-img-top" alt="lego">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Rivière Deûlego</h5>
+                        <p class="card-text">Profitez de la fraicheur de la rivière en vous balladant le long de ses rives. Un lieu idéal pour les cyclistes et promeneurs qui veulent retrouver un peu de calme. Découvrez également son pont, récemment devenu un pont-levis.</p>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="card-body">
+                        <a href="./lieuRiviere.html" class="btn btn-primary">GO</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card flexrow">
+            <div class="row g-0">
+                <div class="col-md-3">
+                    <img src="./images/supermarché.jpg" class="card-img-top" alt="lego">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Supermarché Ogel</h5>
+                        <p class="card-text">Le supermarché "Ogel" de notre ville, permet de remplir son frigo sans y dépenser trop de lego monnaie. Ses produits sont de qualité, la chaîne locale y est privilégiée. </p>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="card-body">
+                        <a href="./lieuSupermarche.html" class="btn btn-primary">GO</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card flexrow ">
+            <div class="row g-0">
+                <div class="col-md-3">
+                    <img src="./images/ThéâtreLego_2.jpg" class="card-img-top" alt="lego">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Théâtre "Lego Mask"</h5>
+                        <p class="card-text">Bâti dans une ancienne Lego-brasserie, le théâtre de Rainbow City "The Mask" offre une programmation très éclectique. Avec une capacité de 200 places et un accès dédié aux PMR, chacun peut venir profiter de son décord datant de l'âge de la brique d'or. Alors, bon spectacle à toutes et tous !</p>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="card-body">
+                        <a href="./lieuTheatre.html" class="btn btn-primary">GO</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card flexrow">
+            <div class="row g-0">
+                <div class="col-md-3">
+                    <img src="./images/tresor0.png" class="card-img-top" alt="lego">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Chasse au Trésor</h5>
+                        <p class="card-text">La Brique d'Or, le symbole de Rainbow City a disparu ! Aidez l'inspecteur Jean Sherlock (JS) à la retrouver en partant explorer la ville, à la recherche d'indices.</p>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="card-body">
+                        <a href="./tresor.html" class="btn btn-primary">GO</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card flexrow ">
+            <div class="row g-0">
+                <div class="col-md-3">
+                    <img src="./images/usine.jpg" class="card-img-top" alt="lego">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Usine de Briques</h5>
+                        <p class="card-text">Lieu historique et fierté de RainbowCity, l'usine de briques a permis à la ville de connaître son essor. Principal créateur d'emploi et fournisseur de briques, elle n'a cessé de s'agrandir, pour finalement devenir le leader mondial de la brique. Toujours en activité, elle reste également ouverte au public qui souhaite la visiter.</p>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="card-body">
+                        <a href="./lieuUsine.html" class="btn btn-primary">GO</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <footer>
+        <span class="header-text"><a href="./mentionsLegales.html" class="header-text">Mentions légales</a></span>
+        <div class="footrow">
+          <div class="footcolumn">
+            <a href="https://twitter.com/" target="_blank"><i class="bi bi-twitter" style="color: #a16737"></i></a>
+          </div>
+          <div class="footcolumn">
+            <a href="https://instagram.com/" target="_blank"><i class="bi bi-instagram" style="color: #a16737"></i></a>
+          </div>
+          <div class="footcolumn">
+            <a href="https://facebook.com/" target="_blank"><i class="bi bi-facebook" style="color: #a16737"></i></a>
+          </div>
+        </div>
+      </footer>
+</div> <!-- div du body -->
+
+<!-- script JS pour bootstrap  -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+<script src="./js/header.js"></script>
+<script>
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+      return new bootstrap.Popover(popoverTriggerEl)
+    })
+  </script>
+</body>
+
+</html>

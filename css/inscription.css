@@ -1,0 +1,248 @@
+h1 {
+  text-align: center;
+  filter: drop-shadow(0px 10px 5px rgba(135, 12, 0, 0.282));
+  /* border-radius: 100px; */
+  /* border: 5px solid rgba(128, 128, 128, 0.6);
+  color: rgba(121, 119, 111, 0.7); */
+  /* background-color: bisque; */
+}
+
+h5{
+  text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.8)!important;
+  color: rgb(255, 250, 233);
+  font-weight: bold;
+  margin-bottom: 10px;
+  width: auto!important;
+}
+
+.champ {
+  height: 30px;
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#art1 > input,
+#art2 > input,
+#art3 > input {
+  color: rgb(29, 16, 61);
+}
+
+#art1, #art2, #art3{
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* #valemail {
+  height: 50px;
+  width: 55px;
+  background-color: red;
+  color: rgb(255, 255, 255);
+  margin: 15px;
+  margin-left: 150px;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: bold;
+} */
+
+#valemail{
+  height: 50px;
+  width: 55px;
+  border-radius: 50px;
+  margin: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 50px;
+  font-family: Arial;
+  text-align: center;
+  border-width: 2px;
+  color: #ffffff;
+  border-color: #fd1414;
+  font-weight: bold;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  filter: drop-shadow(0px 3.5px 2px #913d0976);
+  text-shadow: 0px 0px 0px #d1884c75;
+  background: #de0000;
+}
+
+#valemail:hover {
+  background: rgb(251, 91, 91);
+}
+
+#valemail:active {
+  background: #980000;
+}
+
+/* #valpw {
+  height: 50px;
+  width: 55px;
+  background-color: orange;
+  color: rgb(255, 255, 255);
+  margin: 15px;
+  margin-left: 120px;
+  border-radius: 50px;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: bold;
+} */
+
+#valpw{
+  height: 50px;
+  width: 55px;
+  margin: 15px;
+  margin-left: 120px;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Arial;
+  text-align: center;
+  border-width: 2px;
+  color: #ffffff;
+  border-color: rgb(255, 219, 110);
+  font-weight: bold;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  filter: drop-shadow(0px 3.5px 2px #913d0976);
+  text-shadow: 0px 0px 0px #d1884c75;
+  background: rgb(254, 196, 24);
+}
+
+#valpw:hover{
+  background: rgb(255, 227, 127);
+}
+
+#valpw:active{
+  background: #c9712b;
+}
+
+#col2,
+#col3 {
+  opacity: 0.3;
+}
+
+.col-4 {
+  margin-top: 50px;
+  border-radius: 50px;
+  /* border: 5px solid rgba(128, 128, 128, 0.61); */
+  width: 400px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ul{
+  padding-left: 0px!important;
+}
+
+#formpw > ul,
+h6 {
+  font-weight: bold;
+}
+
+#col1 {
+  background-image: url("../images/Chiffre1_2.png");
+  filter: drop-shadow(0px 10px 5px rgba(135, 12, 0, 0.282));
+}
+
+#col2 {
+  background-image: url("../images/Chiffre2_2.png");
+  filter: drop-shadow(0px 10px 5px rgba(135, 12, 0, 0.282));
+}
+
+#col3 {
+  background-image: url("../images/Chiffre3_2.png");
+  filter: drop-shadow(0px 10px 5px rgba(135, 12, 0, 0.282));
+}
+
+li {
+  margin-left: 20px;
+}
+
+/* #inscription {
+  height: 50px;
+  width: 150px;
+  background-color: rgb(34, 168, 0);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 50px;
+} */
+
+#inscription{
+  height: 50px;
+  width: 150px;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 50px;
+  border-radius: 50px;
+  font-family: Arial;
+  text-align: center;
+  border-width: 2px;
+  color: #ffffff;
+  border-color: #5bf402;
+  font-weight: bold;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  filter: drop-shadow(0px 3.5px 2px #09912076);
+  text-shadow: 0px 0px 0px #d1884c75;
+  background: #66ed18;
+}
+
+
+#inscription:hover{
+  background: rgb(177, 255, 100);
+}
+
+#inscription:active{
+  background: #318b00;
+}
+
+#art1 {
+  /* margin-top: 150px;
+  margin-left: 30px; */
+  color: rgb(255, 255, 255);
+}
+
+#formemail{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#formpw {
+  display: flex;
+  margin-top: 30px;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+}
+
+/* #art2 {
+  margin-right: 10px;
+  padding-right: 10px;
+} */
+
+/* #art3 {
+  margin-right: 60px;
+} */
+
+#formval {
+  display: flex;
+  text-align: center;
+  /* margin-top: 150px;
+  margin-left: 80px; */
+  color: rgb(255, 255, 255);
+}
