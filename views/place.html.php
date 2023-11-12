@@ -10,9 +10,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/lieu.css">
-    <title>Lieu</title>
+    <title><?= $title?></title>
 </head>
 
+<body>
     <!-- Header  -->
     <header>
         <!-- Navbar  -->
@@ -191,7 +192,6 @@
         </div>
     </nav>
 
-</body>
 
 <!-- Corps du texte  -->
 <!-- <div class="corps"> -->
@@ -203,16 +203,14 @@
             </div>
             <div class="col-md-6">
                 <div class="row g-0">
-                    <h1>Nom du lieu</h1>
+                    <h1><?= $titre; ?><br><?= $name; ?></h1>
                 </div>
                 <div class="row g-0 lieutxt">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem dicta atque tempore, eum
-                        voluptate, nam sint sit labore fugiat rem dolorum est non, nihil aliquid veniam modi vitae
-                        cupiditate debitis.</p>
+                    <p><?= $description ?></p>
                 </div>
                 <div class="row g-0 lieutxt2">
                     <div class="col-md-6">
-                        <p>Avis : *****</p>
+                        <p>Avis : <?= $sum; ?></p>
                     </div>
                     <div class="col-md-6">
                         <p> <a href="#" class="btn">Ajouter aux favoris</a></p>
@@ -226,75 +224,30 @@
             </div>
             <div class="row g-0">
                 <div class="cartes d-flex flexcol">
+                    <?php foreach($comments as $comment){?>
                     <div class="card flexrow ">
                         <div class="row g-0">
                             <div class="col-md-1">
-                                <img src="./images/icone.png" class="card-img-top" alt="lego">
+                                <img src="<?= $comment['image']?>" class="card-img-top" alt="<?= $comment['title'] ?>">
                             </div>
                             <div class="col-md-11">
                                 <div class="card-body">
                                     <div class="row g-0">
                                         <div class="col-md-8">
-                                            <h5>Joyeux59 (30/05/2023)</h5>
+                                            <h5><?= $comment['name']." (".$comment['date'].")"?></h5>
                                         </div>
                                         <div class="col-md-4">
-                                            <h5>Avis : *****</h5>
+                                            <h5>Avis : <?= $comment['rating']?></h5>
                                         </div>
                                     </div>
                                     <div class="row g-0">
-                                        <p class="card-text">J'adore cette ville !! Tout est super génial !! :D </p>
+                                        <p class="card-text"><?= $comment['comment']?></p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="card flexrow ">
-                        <div class="row g-0">
-                            <div class="col-md-1">
-                                <img src="./images/icone.png" class="card-img-top" alt="lego">
-                            </div>
-                            <div class="col-md-11">
-                                <div class="card-body">
-                                    <div class="row g-0">
-                                        <div class="col-md-8">
-                                            <h5>Simplet._. (10/06/2023)</h5>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <h5>Avis : ***</h5>
-                                        </div>
-                                    </div>
-                                    <div class="row g-0">
-                                        <p class="card-text">C'était bien, mais sans plus. Je n'ai pas trop d'avis sur
-                                            quoi que ce soit à vrai dire...</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card flexrow ">
-                        <div class="row g-0">
-                            <div class="col-md-1">
-                                <img src="./images/icone.png" class="card-img-top" alt="lego">
-                            </div>
-                            <div class="col-md-11">
-                                <div class="card-body">
-                                    <div class="row g-0">
-                                        <div class="col-md-8">
-                                            <h5>Xx_Grincheux_xX (23/06/2023)</h5>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <h5>Avis : *</h5>
-                                        </div>
-                                    </div>
-                                    <div class="row g-0">
-                                        <p class="card-text">C'est quoi toutes ces couleurs ? et pourquoi les gens
-                                            sourient tout le temps ? je sais pas ce qu'ils prennent mais ça a l'air
-                                            puissant</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php } ?>
                 </div>
             </div>
         </div>
