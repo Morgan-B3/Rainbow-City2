@@ -2,7 +2,7 @@
 
 namespace App\Model;
 
-class Place extends Model
+class Places extends Model
 {
    public static $places = [
             [
@@ -178,5 +178,7 @@ class Place extends Model
             ],
             
         ];
+
+    
     
 }

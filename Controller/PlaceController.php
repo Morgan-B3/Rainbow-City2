@@ -2,19 +2,19 @@
 
 namespace App\Controller;
 
-use App\Model\Place;
+use App\Model\Places;
 use App\View;
 
 class PlaceController
 {
-    public function list()
+    public function placeSelect(string $placeName)
     {
-        $title = 'Lieux';
-        $places = Place::$places;
+        $places = Places::$places;
         
-        return View::render('place', [
-            'title' => $title,
-            'place' => $places,
-        ]);
+        foreach ($places as $place){
+        if ($place['title'] == $placeName){
+            return View::render('place', $place);
+        }
+        }
     }
 }

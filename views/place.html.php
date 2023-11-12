@@ -199,7 +199,7 @@
     <div class="d-flex flexcol lieu">
         <div class="row g-0 titre">
             <div class="col-md-6 image">
-                <img src="./images/lego3.jpg" alt="lego">
+                <img src="./images/places/<?= $image;?>" alt="<?= $title;?>">
             </div>
             <div class="col-md-6">
                 <div class="row g-0">
@@ -228,7 +228,7 @@
                     <div class="card flexrow ">
                         <div class="row g-0">
                             <div class="col-md-1">
-                                <img src="<?= $comment['image']?>" class="card-img-top" alt="<?= $comment['title'] ?>">
+                                <img src=".images/comments/<?= $comment['image']?>" class="card-img-top" alt="<?= $comment['title'] ?>">
                             </div>
                             <div class="col-md-11">
                                 <div class="card-body">
