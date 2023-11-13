@@ -33,9 +33,7 @@
           alt="Rainbow City logo"
           class="rainbowlogo h-[90px]"
       /></a>
-      <div
-        class="h-full lg:flex flex-col hidden lg:w-1/2 xl:w-[60%] justify-around"
-      >
+      <div class="h-full lg:flex flex-col hidden lg:w-1/2 xl:w-[60%] justify-around">
         <nav class="flex justify-between w-full">
           <div></div>
           <a

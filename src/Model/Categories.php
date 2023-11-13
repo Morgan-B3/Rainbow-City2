@@ -70,7 +70,7 @@ class Categories extends Model
             'title'=>'PMR',
             'name'=>'Accès PMR',
             'category'=>'status',
-            'category_name'=>'Personne à Mobilité Réduite (PMR)',
+            'category_name'=>'PMR',
         ],
         [
             'title'=>'Résident',

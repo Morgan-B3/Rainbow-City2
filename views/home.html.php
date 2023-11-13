@@ -138,56 +138,37 @@
       </div>
       
         <!-- Gallery -->
-      <div class="w-75 gallerie">
+    <h2>Vous êtes ...</h2>
+      <div class="w-75 grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
       <?php foreach($categories as $category) {
             if ($category['category'] == 'status' || is_array($category['category'])){
                 if (is_array($category['category'])){
                 $category['category_name'] = $category['category_name'][0];
                 $category['title'] = $category['category_name'];
                 } ?>
-        <a href="/catégorie" class="w-[25%]">
+        <a href="/catégorie" class="">
           <figure class="movie" >
-            <img src="./images/category/<?=$category['title']?>.jpg" height="150px" class="" />
-            <figcaption><div class="px-4"><?= $category['category_name']?></div></figcaption>
+            <img src="./images/category/<?=$category['title']?>.jpg" class="" />
+            <figcaption><div class="px-5"><?= $category['category_name']?></div></figcaption>
           </figure>
         </a>
         <?php } } ?>
       </div>
 
-      <h2>Vous êtes ...</h2>
-      <div class="w-75 gallerie">
-        <?php foreach($categories as $category) {
-            if ($category['category'] == 'status' || is_array($category['category'])){
+      <h2>Vous préferez ...</h2>
+      <div class="w-75 grid grid-cols-3 gap-10">
+      <?php foreach($categories as $category) {
+            if ($category['category'] == 'activity' || is_array($category['category'])){
                 if (is_array($category['category'])){
                 $category['category_name'] = $category['category_name'][0];
                 $category['title'] = $category['category_name'];
                 } ?>
-        <div class="image">
-          <img src="./images/category/<?=$category['title']?>.jpg" height="150px" class="image_img"/>
-          <a href="./listeResident.html">
-            <div class="image_overlay">
-              <div class="image_title"><?= $category['category_name']?></div>
-            </div>
-          </a>
-        </div>
-        <?php } } ?>
-      </div>
-
-      <h2>Vous préferez ...</h2>
-      <div class="w-75 gallerie">
-        <?php foreach($categories as $category) {
-            if ($category['category'] == 'activity' || is_array($category['category'])){
-                if (is_array($category['category'])){
-                    $category['category_name'] = $category['category_name'][1];
-                    }?>
-         <div class="image">
-          <img src="./images/category/<?=$category['title']?>.jpg" height="150px" class="image_img"/>
-          <a href="./listeResident.html">
-            <div class="image_overlay">
-              <div class="image_title"><?= $category['category_name']?></div>
-            </div>
-          </a>
-        </div>
+        <a href="/catégorie" class="">
+          <figure class="movie" >
+            <img src="./images/category/<?=$category['title']?>.jpg" class="" />
+            <figcaption><div class="px-5"><?= $category['category_name']?></div></figcaption>
+          </figure>
+        </a>
         <?php } } ?>
       </div>
 
