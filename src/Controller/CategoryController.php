@@ -1,10 +1,10 @@
 <?php
 
-namespace RainbowCity\Controller;
+namespace Morgan\RainbowCity\Controller;
 
-use RainbowCity\Model\Categories;
-use RainbowCity\Model\Places;
-use RainbowCity\View;
+use Morgan\RainbowCity\Model\Categories;
+use Morgan\RainbowCity\Model\Places;
+use Morgan\RainbowCity\View;
 
 class CategoryController
 {

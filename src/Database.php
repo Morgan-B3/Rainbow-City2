@@ -1,6 +1,6 @@
 <?php
 
-namespace RainbowCity;
+namespace Morgan\RainbowCity;
 
 class Database
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace RainbowCity\Model;
+namespace Morgan\RainbowCity\Model;
 
 class Categories extends Model
 {

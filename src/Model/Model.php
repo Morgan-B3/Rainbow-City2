@@ -1,8 +1,8 @@
 <?php
 
-namespace RainbowCity\Model;
+namespace Morgan\RainbowCity\Model;
 
-use RainbowCity\Database;
+use Morgan\RainbowCity\Database;
 
 class Model
 {
