@@ -211,7 +211,7 @@ width:50px;
 
 .movie:hover figcaption {
     background-color: rgba(5, 37, 65, 0.5);
-    font-size: 3em;
+    font-size: 2.3em;
     backdrop-filter: blur(5px);
    
 }
