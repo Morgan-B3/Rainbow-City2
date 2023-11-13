@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Model;
+namespace RainbowCity\Model;
 
-use App\Database;
+use RainbowCity\Database;
 
 class Model
 {

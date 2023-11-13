@@ -1,0 +1,19 @@
+{
+    "name": "morgan/rainbow-city",
+    "autoload": {
+        "psr-4": {
+            "Morgan\\RainbowCity\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Morgan-B3",
+            "email": "boutroism@gmail.com"
+        }
+    ],
+    "require": {
+        "altorouter/altorouter": "^2.0",
+        "filp/whoops": "^2.15",
+        "symfony/var-dumper": "^6.3"
+    }
+}

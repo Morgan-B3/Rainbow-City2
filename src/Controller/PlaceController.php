@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Controller;
+namespace RainbowCity\Controller;
 
-use App\Model\Places;
-use App\View;
+use RainbowCity\Model\Places;
+use RainbowCity\View;
 
 class PlaceController
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Model;
+namespace RainbowCity\Model;
 
 class Places extends Model
 {
