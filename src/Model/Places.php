@@ -1,5 +1,7 @@
 <?php
 
+// Ajouter "categories" et "comments" via les foreign keys en MySQL
+
 namespace Morgan\RainbowCity\Model;
 
 class Places extends Model
@@ -12,9 +14,7 @@ class Places extends Model
                 'image2' => './images/places/bar2.jpg',
                 'description' => "Pas d'eau en vue, venez découvrir notre potion du sourire, vous ne ressortirez plus jamais de Rainbow city après avoir vécu cette expérience!",
                 'description-mini' => "Pas d'eau en vue, venez découvrir notre potion du sourire, vous ne ressortirez plus jamais de Rainbow city après avoir vécu cette expérience!",
-                'categories' => [
-        
-                ],
+                'categories' => [],
                 'comments' => [
                     [
                         'icon' => './images/comments/icon1.jpg',
@@ -46,9 +46,7 @@ class Places extends Model
                 'image2' => '',
                 'description' => "Bricks & Books est un lieu où petits et grands peuvent venir partager leur passion de la lecture. Donner envie de croquer des bricks de textes est notre coeur de métier. Alors bonne lecture à toutes et tous !",
                 'description-mini' => "Brick Books est un lieu où petits et grands peuvent venir partager leur passion de la lecture. Donner envie de croquer des bricks de textes est notre coeur de métier. Alors bonne lecture à toutes et tous !",
-                'categories' => [
-        
-                ],
+                'categories' => [],
                 'comments' => [
                     [
                         'icon' => './images/comments/icon00.jpg',
@@ -80,9 +78,7 @@ class Places extends Model
                 'image2' => '',
                 'description' => "Aux Boules et Quilles permet aux enfants, aux parents, aux amis de se défouler sur la piste. La taille de nos boules est adaptée à chaque catégorie de joueurs. Alors ne vous faites pas de brique, et tous à vos boules pour striker en coeur !",
                 'description-mini' => "Aux Boules et Quilles permet aux enfants, aux parents, aux amis de se défouler sur la piste. La taille de nos boules est adaptée à chaque catégorie de joueurs. Alors ne vous faites pas de brique, et tous à vos boules pour striker en coeur !",
-                'categories' => [
-        
-                ],
+                'categories' => [],
                 'comments' => [
                     [
                         'icon' => './images/comments/icon00.jpg',
@@ -114,9 +110,7 @@ class Places extends Model
                 'image2' => '',
                 'description' => "Bienvenue dans l'antre du 6ème art de Rainbow city, faites place à la 5D 16K, pour voir des briques plus cubiques que jamais !<br><br>A l'affiche cette semaine :<br><br>- JuraBrick Park<br>- Le Seigneur des Legos<br>- Titabrick<br>- Cube Wars, épisode III : la Revanche des Briques<br>- Indiana Lego : Les aventuriers de la Brique perdue<br>- Stranger Bricks",
                 'description-mini' => "Bienvenue dans l'antre du 6ème art de Rainbow city, faites place à la 5D 16K, pour voir des briques plus cubiques que jamais !",
-                'categories' => [
-        
-                ],
+                'categories' => [],
                 'comments' => [
                     [
                         'icon' => './images/comments/icon01.jpg',
@@ -149,9 +143,7 @@ class Places extends Model
                 'image2' => '',
                 'description' => "",
                 'description-mini' => "",
-                'categories' => [
-        
-                ],
+                'categories' => [],
                 'comments' => [
                     [
                         'icon' => './images/comments/icon.jpg',
