@@ -30,7 +30,7 @@ $lieux = [
             ],            
             [
                 'icon' => 'icon3.jpg',
-                'name' => 'Margaret',
+                'name' => 'Meredith',
                 'comment' => "Honteux ! Comment ils ont pu me virer après tout ce que j'ai dépensé en boisson ??",
                 'rating' => 1,
                 'date' => '2023-06-27'
