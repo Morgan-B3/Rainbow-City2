@@ -6,7 +6,7 @@
       <!-- Navbar  -->
       <a href="/"
         ><img
-          src="./images/logo.png"
+          src="images/logo.png"
           alt="Rainbow City logo"
           class="rainbowlogo h-[90px]"
       /></a>
