@@ -3,7 +3,7 @@
 @section('content')
 
 @foreach ($places as $place)
-    {{$place->name}}
+    <a href="/catégorie/{{$category->name}}/{{$place->name}}">{{$place->name}}</a>
 @endforeach
 
 @endsection

@@ -7,7 +7,7 @@
     <div class="w-75 grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 mx-auto"> 
         @foreach($categories as $category)
             @if ($category->sub_category == 'status')
-                <a href="/catégorie/{{$category->name}}" class="">
+                <a href="/catégorie/{{$category->name}}">
                     <figure class="gallery relative overflow-hidden ">
                         <img src="{{asset("images/categories/$category->name.jpg")}}" class="hover:scale-110 transition ease-in-out duration-300 " />
                         <figcaption class="absolute bottom-0 left-0 right-0 flex flex-col items-center justify-center text-lg text-white transition-all h-full text-center ease-in-out duration-300 hover:text-xl leading-tight hover:leading-tight">
@@ -25,7 +25,7 @@
     <div class="w-75 grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 mx-auto">
         @foreach($categories as $category)
             @if ($category->sub_category == 'activity')
-                <a href="/catégorie/{{$category->name}}" class="">
+                <a href="/catégorie/{{$category->name}}">
                     <figure class="gallery relative overflow-hidden " >
                         <img src="{{asset("images/categories/$category->name.jpg")}}" class="hover:scale-110 transition ease-in-out duration-300 " />
                         <figcaption class="absolute bottom-0 left-0 right-0 flex flex-col items-center justify-center text-lg text-white transition-all h-full text-center ease-in-out duration-300 hover:text-xl leading-tight hover:leading-tight">

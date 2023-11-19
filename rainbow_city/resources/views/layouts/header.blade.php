@@ -6,14 +6,14 @@
   <!-- Navbar  -->
   <div class="w-full flex justify-between ">
     <a href="/">
-      <img src="images/logo.png" alt="Rainbow City logo" class="rainbowlogo h-[90px]"/>
+      <img src="/images/logo.png" alt="Rainbow City logo" class="rainbowlogo h-[90px]"/>
     </a>
     <div class="h-full lg:flex flex-col hidden lg:w-1/2 xl:w-fit justify-around gap-2">
     <nav class="flex justify-between w-full">
       <div></div>
       <a href="./meteo.html" class="meteo hidden xl:flex header-text items-center gap-x-2">
         <div id="meteo"></div>
-        <img src="images/sun.png" alt="soleil" class="w-[30px] align-middle"/>
+        <img src="/images/sun.png" alt="soleil" class="w-[30px] align-middle"/>
       </a>
 
       <div class="flex gap-x-8">
@@ -25,7 +25,7 @@
         </a>
         <a href="./pageprofil.html" class="header-text flex">
           Mon profil
-          <img src="./images/icone.png" alt="icone" class="w-[30px] align-middle"/>
+          <img src="/images/icone.png" alt="icone" class="w-[30px] align-middle"/>
         </a>
       </div>
     </nav>
