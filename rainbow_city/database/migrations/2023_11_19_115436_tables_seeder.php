@@ -1,7 +1,9 @@
 <?php
 
+use Database\Seeders\CategorySeeder;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
@@ -11,11 +13,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('places_categories', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('place_id')->constrained();
-            $table->foreignId('category_id')->constrained();
-        });
+        Artisan::call('db:seed', [
+            '--class' => \CategorySeeder::class,
+        ]);
     }
 
     /**
@@ -23,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('places_categories');
+        //
     }
 };

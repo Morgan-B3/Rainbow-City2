@@ -21,7 +21,7 @@
     <title>{{$title ?? 'Rainbow City'}}</title>
 </head>
 <body>
-    <div class="flex flex-col justify-between h-screen">
+    <div class="flex flex-col justify-between min-h-screen h-full">
 
         <header class="sticky top-0 bg-blue-300 py-4">
             @include('layouts.header')

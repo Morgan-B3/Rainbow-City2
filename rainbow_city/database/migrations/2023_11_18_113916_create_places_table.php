@@ -17,7 +17,6 @@ return new class extends Migration
             $table->text('description');
             $table->text('description_short');
             $table->integer('rating')->nullable();
-            $table->timestamps();
         });
     }
 
