@@ -42,12 +42,11 @@
         </main>
 
 
-        <footer class="bg-blue-300 py-4 mt-6 block bottom-0">
-            @include('layouts.footer')
-            {{-- <div class="w-fit mx-auto">
-                Webflix &copy; {{date(('Y'))}}
-            </div> --}}
-        </footer>
+        @include('layouts.footer')
+        {{-- <div class="w-fit mx-auto">
+            Webflix &copy; {{date(('Y'))}}
+        </div> --}}
+     
 
     </div>
 

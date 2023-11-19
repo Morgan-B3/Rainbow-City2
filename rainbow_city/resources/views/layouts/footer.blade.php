@@ -2,27 +2,27 @@
       <!-- ********* -->
       <!--  Footer  -->
       <!-- ********* -->
-      <footer>
-        <span class="header-text"
-          ><a href="./mentionsLegales.html" class="header-text"
-            >Mentions légales</a
-          ></span
-        >
-        <div class="footrow">
+      <footer class="flex justify-between px-4 bg-blue-300 py-2 mt-6 block bottom-0">
+        <span class="header-text">
+          <a href="./mentionsLegales.html" class="header-text">
+            Mentions légales
+          </a>
+        </span>
+        <div class="footrow flex gap-4">
           <div class="footcolumn">
-            <a href="https://twitter.com/" target="_blank"
-              ><i class="bi bi-twitter" style="color: #a16737"></i
-            ></a>
+            <a href="https://twitter.com/" target="_blank">
+              <i class="bi bi-twitter" style="color: #a16737"></i>
+            </a>
           </div>
           <div class="footcolumn">
-            <a href="https://instagram.com/" target="_blank"
-              ><i class="bi bi-instagram" style="color: #a16737"></i
-            ></a>
+            <a href="https://instagram.com/" target="_blank">
+              <i class="bi bi-instagram" style="color: #a16737"></i>
+            </a>
           </div>
           <div class="footcolumn">
-            <a href="https://facebook.com/" target="_blank"
-              ><i class="bi bi-facebook" style="color: #a16737"></i
-            ></a>
+            <a href="https://facebook.com/" target="_blank">
+              <i class="bi bi-facebook" style="color: #a16737"></i>
+            </a>
           </div>
         </div>
       </footer>

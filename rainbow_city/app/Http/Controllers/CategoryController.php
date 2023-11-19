@@ -18,6 +18,7 @@ class CategoryController extends Controller
                 ->where('categories.id', $category->id)
                 ->get();
         return view('category', [
+            'title' => 'Liste '.$category->sub_name,
             'categories' => $category,
             'places' => $places,
         ]);

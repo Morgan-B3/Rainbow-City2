@@ -4,7 +4,7 @@
     <!-- *********** -->
     <header class="flex justify-around lg:justify-evenly xl:justify-around items-center">
       <!-- Navbar  -->
-      <a href="index.html"
+      <a href="/"
         ><img
           src="./images/logo.png"
           alt="Rainbow City logo"
