@@ -2,12 +2,15 @@
       <!-- ********* -->
       <!--  Footer  -->
       <!-- ********* -->
-      <footer class="flex justify-between px-4 bg-blue-300 py-2 mt-6 block bottom-0">
+      <footer class="bg-gradient-to-t from-amber-500 to-yellow-400  flex justify-between px-4 bg-blue-300 py-2 mt-6 block bottom-0">
         <span class="header-text">
           <a href="./mentionsLegales.html" class="header-text">
             Mentions légales
           </a>
         </span>
+        <div class="w-fit mx-auto">
+            Rainbow City &copy; {{date(('Y'))}}
+        </div>
         <div class="footrow flex gap-4">
           <div class="footcolumn">
             <a href="https://twitter.com/" target="_blank">

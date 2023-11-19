@@ -42,7 +42,7 @@ class CategorySeeder extends Seeder
         DB::table('categories')->insert([
             'name' => 'Famille',
             'sub_category' => 'status',
-            'sub_name' => 'Famille',
+            'sub_name' => 'En Famille',
         ]);
         DB::table('categories')->insert([
             'name' => 'Gastronomie',
@@ -75,9 +75,9 @@ class CategorySeeder extends Seeder
             'sub_name' => 'Résident',
         ]);
         DB::table('categories')->insert([
-            'name' => 'Sénior',
+            'name' => 'Senior',
             'sub_category' => 'status',
-            'sub_name' => 'Sénior',
+            'sub_name' => 'Senior',
         ]);
         DB::table('categories')->insert([
             'name' => 'Solo',
