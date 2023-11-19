@@ -17,6 +17,11 @@ class PlaceController extends Controller
                 ->select('categories.*')
                 ->where('places.id', $place->id)
                 ->get();
+        // $comments = Comment::join('places', 'places.id', '=', 'comments.place_id')
+        // ->join('places', 'places.id', '=', 'places_categories.place_id')
+        // ->select('categories.*')
+        // ->where('places.id', $place->id)
+        // ->get();       
         return view('place', [
             'title' => $place->name,
             'categories' => $categories,
