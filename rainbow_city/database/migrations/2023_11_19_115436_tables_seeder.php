@@ -16,6 +16,12 @@ return new class extends Migration
         Artisan::call('db:seed', [
             '--class' => \CategorySeeder::class,
         ]);
+        Artisan::call('db:seed', [
+            '--class' => \PlaceSeeder::class,
+        ]);
+        Artisan::call('db:seed', [
+            '--class' => \PlacesCategoriesSeeder::class,
+        ]);
     }
 
     /**

@@ -15,8 +15,8 @@ class CategoryController extends Controller
         $places = Place::join('places_categories', 'places.id', '=', 'places_categories.place_id')
                 ->join('categories', 'categories.id', '=', 'places_categories.category_id')
                 ->select('places.*')
-                ->where('categories.id', $category->id);
-        dd($places);
+                ->where('categories.id', $category->id)
+                ->get();
         return view('category', [
             'categories' => $category,
             'places' => $places,

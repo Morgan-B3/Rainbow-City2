@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('places', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('title');
             $table->text('description');
             $table->text('description_short');
             $table->integer('rating')->nullable();
