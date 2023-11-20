@@ -20,7 +20,7 @@
                 </div>
                 <div class="row g-0 lieutxt2">
                     <div class="col-md-6">
-                        <p>Avis : $sum </p>
+                        <p>Avis : {{$rating}}/5 </p>
                     </div>
                     <div class="col-md-6">
                         <p> <a href="#" class="btn">Ajouter aux favoris</a></p>
@@ -29,82 +29,61 @@
             </div>
         </div>
         <div class="w-fit mx-auto">
-            <div class="row g-0 commentaires">
-                <h2>Avis et commentaires</h2>
-            </div>
-            <div class="row g-0">
-                <div class="cartes d-flex flexcol">
-                    {{-- @foreach($comments as $comment)
-                    <div class="card flexrow ">
-                        <div class="row g-0">
-                            <div class="col-md-1">
-                                <img src="images/comments/{{$comment->image}}" class="card-img-top" alt="{{$comment->title}}">
-                            </div>
-                            <div class="col-md-11">
-                                <div class="card-body">
-                                    <div class="row g-0">
-                                        <div class="col-md-8">
-                                            <h5><{{$comment['name']}}" ("{{$comment['date']}})"</h5>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <h5>Avis : {{$comment['rating']}}</h5>
-                                        </div>
-                                    </div>
-                                    <div class="row g-0">
-                                        <p class="card-text">{{$comment['comment']}}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            
+            <h2 class="w-fit mx-auto">Avis et commentaires</h2>
+            
+            <div class="flex flex-col gap-4 my-4">
+                @foreach($comments as $comment)
+                <div class="bg-white rounded-lg p-3 flex items-center">
+                    <div class="col-md-1">
+                        @foreach ($users as $user) @if ($user->id == $comment->user_id)
+                        <img src="/{{$user->image}}" alt="{{$user->image}}" class="rounded-full w-[50px]">
+                        @endif @endforeach 
                     </div>
-                    --}}
+                    
+                    <div class="w-full">
+                        <div class="flex justify-between mb-2">
+                            <h5 class="font-bold w-1/2">@foreach ($users as $user)
+                                @if ($user->id == $comment->user_id)
+                                    {{$user->name}}
+                                @endif
+                            @endforeach 
+                            </h5>
+                            <h5>Note : {{$comment['rating']}}/5</h5>
+                            <h5>({{date("d/m/Y",strtotime($comment['date']))}})</h5>
+                        </div>
+                        <p class="card-text">{{$comment['comment']}}</p>
+                    </div>
                 </div>
+                @endforeach
             </div>
+            
         </div>
-        <div class="w-fit mx-auto">
+        <div >
 
-            <?php // if(pas de commentaire) => laissez-nous votre avis
+            <?php // if (pas de compte) => connectez-vous pour laisser un avis
+            // else if (pas de commentaire) => laissez-nous votre avis
                     // else => modifier / supprimer votre avis ?>
 
-            <div class=" w-fit mx-auto commentaires">
-                <h3>Laissez-nous votre avis</h3>
-            </div>
-            <form method="get">
-                <div class="row g-0">
-                    <div class="cartes d-flex flexcol">
-                        <div class="card flexrow ">
-                            <div class="row g-0">
-                                <div class="col-md-1">
-                                    <img src="./images/icone.png" class="card-img-top" alt="lego">
-                                </div>
-                                <div class="col-md-11">
-                                    <div class="card-body">
-                                        <div class="row g-0">
-                                            <div class="col-md-10">
-                                                <div class="row g-0">
-                                                    <div class="col-md-8">
-                                                        <h5>Super_Syl (30/06/2023)</h5>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <p>Avis : <input type="radio" name="avis" id="avis1" required><!-- <label for="avis1"><img src="./images/favoris.png" class="etoile"></label> --><input type="radio" name="avis" id="avis2" required><input type="radio" name="avis" id="avis3" required><input type="radio" name="avis" id="avis4" required><input type="radio" name="avis" id="avis5"required ></p>
-                                                    </div>
-                                                </div>
-                                                <div class="row g-0 ">
-                                                    <div class="col-md-12">
-                                                        <textarea placeholder="Votre commentaire" cols="30" rows="3"
-                                                            class="w-100"required></textarea>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-2 comment">
-                                                <button type="submit" href="#" class="btn">Envoyer</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+            
+            <h3 class=" w-fit mx-auto commentaires">Laissez-nous votre avis</h3>
+            
+            <form method="post" class="bg-white rounded-lg w-[70%] mx-auto flex items-center my-4 p-3">  
+                <div class="col-md-1">
+                    <img src="/images/icon.png" class="w-[70px] rounded-full mx-auto" alt="lego">
+                </div>
+                <div class="w-full">
+                    <div class="flex justify-between mb-2 items-center">
+                        <h5 class="font-bold w-1/2">Super_Syl</h5>
+                        <div>
+                            <p>Note : <input type="radio" name="avis" id="avis1" required><!-- <label for="avis1"><img src="./images/favoris.png" class="etoile"></label> --><input type="radio" name="avis" id="avis2" required><input type="radio" name="avis" id="avis3" required><input type="radio" name="avis" id="avis4" required><input type="radio" name="avis" id="avis5"required ></p>
                         </div>
+                        <h5>({{date("d/m/Y")}})</h5>
                     </div>
+                    <textarea placeholder="Votre commentaire" cols="30" rows="2" class="w-full min-h-[45px] max-h-[200px]" required ></textarea>
+                </div>
+                <div class="col-md-2 comment">
+                    <button type="submit" href="#" class="btn">Envoyer</a>
                 </div>
             </form>
         </div>

@@ -16,6 +16,8 @@ return new class extends Migration
             $table->text('comment');
             $table->integer('rating');
             $table->timestamp('date');
+            $table->foreignId('user_id')->constrained();
+            $table->foreignId('place_id')->constrained();
             $table->timestamps();
         });
     }
