@@ -55,6 +55,71 @@ class PlacesCategoriesSeeder extends Seeder
                 'Senior',    
                 'Solo',
             ],
+            'Bowling' => [
+
+            ],
+            'Cinéma' => [
+
+            ],
+            'Coiffeur' => [
+
+            ],
+            'Ecole' => [
+
+            ],
+            'Fleuriste' => [
+
+            ],
+            'Forêt' => [
+
+            ],
+            'Gare' => [
+
+            ],
+            'Hopital' => [
+
+            ],
+            'Jardin' => [
+
+            ],
+            'Mairie' => [
+
+            ],
+            'Maison de Retraite' => [
+
+            ],
+            'Musée' => [
+
+            ],
+            'Opéra' => [
+
+            ],
+            'Parc' => [
+
+            ],
+            'Plage' => [
+
+            ],
+            'Caserne' => [
+
+            ],
+            'Quartier' => [
+
+            ],
+            'Restaurant' => [
+
+            ],
+            'Rivière' => [
+
+            ],
+            'Supermarché' => [
+
+            ],
+            'Théâtre' => [
+
+            ],
+            'Usine' => [
+            ],
         ];
 
         foreach($placesCategories as $place_name => $categories){
