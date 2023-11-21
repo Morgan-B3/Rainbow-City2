@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('title');
+            $table->string('slug');
             $table->text('description');
             $table->text('description_short');
             $table->integer('rating')->nullable();

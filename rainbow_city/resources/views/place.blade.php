@@ -3,13 +3,13 @@
 @section('content')
 
     @foreach ($categories as $category)
-        <a href="/catégorie/{{$category->name}}">{{$category->name}}</a>
+        <a href="/categorie/{{$category->name}}">{{$category->name}}</a>
     @endforeach
 
     <div class="flex flex-col lieu">
         <div class="row g-0 titre">
             <div class="col-md-6 image">
-                <img src="./images/places/" alt="{{$title}}">
+                <img src="/images/places/{{$place->slug}}.jpg" alt="{{$title}}">
             </div>
             <div class="col-md-6">
                 <div class="row g-0">
@@ -20,7 +20,7 @@
                 </div>
                 <div class="row g-0 lieutxt2">
                     <div class="col-md-6">
-                        <p>Avis : {{$rating}}/5 </p>
+                        <p>Avis : {{$rating}} </p>
                     </div>
                     <div class="col-md-6">
                         <p> <a href="#" class="btn">Ajouter aux favoris</a></p>

@@ -26,11 +26,11 @@ return new class extends Migration
         Artisan::call('db:seed', [
             '--class' => \UserSeeder::class,
         ]);
-        Comment::factory(10)->create(function(){
+        Comment::factory(50)->create(function(){
             return[
                 'rating' => rand(1,5),
                 'user_id' => rand(1,3),
-                'place_id' => rand(1,2),
+                'place_id' => rand(1,24),
             ];
         });
     

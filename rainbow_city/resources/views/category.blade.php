@@ -2,8 +2,8 @@
 
 @section('content')
 
-@foreach ($places as $place)
-    <a href="/catégorie/{{$category->name}}/{{$place->name}}">{{$place->name}}</a>
+@foreach ($category->places as $place)
+    <a href="/categorie/{{$category->name}}/{{$place->name}}">{{$place->name}}</a>
 @endforeach
 
 @endsection

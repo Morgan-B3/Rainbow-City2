@@ -18,6 +18,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index']);
 
-Route::get('/catégorie/{category}', [CategoryController::class, 'index']);
+Route::get('/categorie/{category}', [CategoryController::class, 'index']);
 
-Route::get('/catégorie/{category}/{place}', [PlaceController::class, 'index']);
+Route::get('/categorie/{category}/{place}', [PlaceController::class, 'index']);

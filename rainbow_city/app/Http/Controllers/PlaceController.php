@@ -27,7 +27,12 @@ class PlaceController extends Controller
             $ratings += $comment->rating;
             $count ++;
         }
-        $ratings /= $count;
+        if ($count == 0){
+            $ratings = "Donnez votre avis !";
+        }
+        else{
+            $ratings = round(($ratings/$count),1)."/5";
+        }
 
         return view('place', [
             'title' => $place->name,
@@ -35,7 +40,7 @@ class PlaceController extends Controller
             'place' => $place,
             'comments' => $comments,
             'users' => User::all(),
-            'rating' => round($ratings,1),
+            'rating' => $ratings,
         ]);
     }
 }
