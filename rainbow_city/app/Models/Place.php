@@ -4,13 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Place extends Model
 {
     use HasFactory;
 
-    public function categories()
+    public function categories(): BelongsToMany
     {
-        return $this->belongsToMany('App\Models\Category', 'places_categories', 'place_id', 'category_id');
+        return $this->belongsToMany(Category::class);
     }
 }
