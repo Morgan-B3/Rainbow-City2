@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Comment;
 use App\Models\Place;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class PlaceController extends Controller
@@ -16,16 +18,24 @@ class PlaceController extends Controller
                 ->join('places', 'places.id', '=', 'places_categories.place_id')
                 ->select('categories.*')
                 ->where('places.id', $place->id)
-                ->get();
-        // $comments = Comment::join('places', 'places.id', '=', 'comments.place_id')
-        // ->join('places', 'places.id', '=', 'places_categories.place_id')
-        // ->select('categories.*')
-        // ->where('places.id', $place->id)
-        // ->get();       
+                ->get();    
+        $comments = Comment::where('place_id', '=', $place->id)->get()->sortByDesc('date');
+
+        $ratings = 0;
+        $count = 0;
+        foreach($comments as $comment){
+            $ratings += $comment->rating;
+            $count ++;
+        }
+        $ratings /= $count;
+
         return view('place', [
             'title' => $place->name,
             'categories' => $categories,
             'place' => $place,
+            'comments' => $comments,
+            'users' => User::all(),
+            'rating' => round($ratings,1),
         ]);
     }
 }

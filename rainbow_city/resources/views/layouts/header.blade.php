@@ -25,7 +25,7 @@
         </a>
         <a href="./pageprofil.html" class="header-text flex">
           Mon profil
-          <img src="/images/icone.png" alt="icone" class="w-[30px] align-middle"/>
+          <img src="/images/icon.png" alt="icone" class="w-[30px] align-middle"/>
         </a>
       </div>
     </nav>
